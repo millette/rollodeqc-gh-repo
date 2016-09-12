@@ -33,6 +33,7 @@ module.exports = (owner, repo) => ghGot(
 .then((x) => x.body)
 .then(utils.chosenFields)
 .then((x) => {
-  x.owner = utils.chosenFields(x.owner)
+  if (x.owner) { x.owner = utils.chosenFields(x.owner) }
+  if (x.organization) { x.organization = utils.chosenFields(x.organization) }
   return x
 })
