@@ -1,6 +1,6 @@
 {
   "name": "rollodeqc-gh-repo",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "RoLLodeQc utility to fetch a single repo from GitHub.",
   "license": "AGPL-3.0",
   "repository": "millette/rollodeqc-gh-repo",
