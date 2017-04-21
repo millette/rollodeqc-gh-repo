@@ -7,4 +7,4 @@ test('title', async t => {
   t.is(result.owner.login, 'millette')
 })
 
-test('404', async t => await t.throws(fn('millette/rollodeqc-gh-repo-404'), 'Response code 404 (Not Found)'))
+test('404', t => t.throws(fn('millette/rollodeqc-gh-repo-404'), 'Response code 404 (Not Found)'))
