@@ -29,19 +29,19 @@ const rollodeqcGhRepo = require('./')
 
 updateNotifier({ pkg: require('./package.json') }).notify()
 
-const cli = meow([
-  'Usage',
-  '  $ rollodeqc-gh-repo [input]',
-  '',
-  'Options',
-  '  --foo  Lorem ipsum. [Default: false]',
-  '',
-  'Examples',
-  '  $ rollodeqc-gh-repo',
-  '  unicorns & rainbows',
-  '  $ rollodeqc-gh-repo ponies',
-  '  ponies & rainbows'
-])
+const cli = meow(`
+  Usage
+    $ rollodeqc-gh-repo [input]
+
+  Options
+    --foo  Lorem ipsum. [Default: false]
+
+  Examples
+    $ rollodeqc-gh-repo
+    unicorns & rainbows
+    $ rollodeqc-gh-repo ponies
+    ponies & rainbows
+`)
 
 rollodeqcGhRepo(cli.input[0] || 'millette', cli.input[1] || 'rollodeqc-gh-repo')
   .then((response) => {
