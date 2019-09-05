@@ -30,10 +30,10 @@ module.exports = (owner, repo) => ghGot(
   ['repos', owner, repo].join('/'),
   { headers: { accept: 'application/vnd.github.drax-preview+json' } }
 )
-.then((x) => x.body)
-.then(utils.chosenFields)
-.then((x) => {
-  if (x.owner) { x.owner = utils.chosenFields(x.owner) }
-  if (x.organization) { x.organization = utils.chosenFields(x.organization) }
-  return x
-})
+  .then((x) => x.body)
+  .then(utils.chosenFields)
+  .then((x) => {
+    if (x.owner) { x.owner = utils.chosenFields(x.owner) }
+    if (x.organization) { x.organization = utils.chosenFields(x.organization) }
+    return x
+  })
